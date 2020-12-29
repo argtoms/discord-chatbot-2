@@ -33,7 +33,7 @@ class Chatbot{
         const response = await res.json().catch(e =>{
             throw new Error(`Ran into an Error. ${e}`);
         });
-        return response.message;
+        return response.message.replace('CleverChat', chatbot_name).replace('male', chatbot_gender);
     }
 }
 module.exports = Chatbot;

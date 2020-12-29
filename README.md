@@ -25,7 +25,7 @@ Quick Chatbot API wrapper for your discord bot and many other things.
 
 ```js
 
-const { Chatbot } =  require("discord-chatbot");
+const Chatbot  =  require("discord-chatbot");
 
 const chatbot  =  new  Chatbot({name: "Udit", gender: "Male"});
 
