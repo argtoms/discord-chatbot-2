@@ -27,7 +27,7 @@ class Chatbot{
      */
     async chat(message){
         if(!message) throw new Error("Error. No message provided")
-        const res = await fetch(`https://api.udit.gq/api/chatbot?message=${encodeURIComponent(message)}&gender=${chatbot_gender}&name=${chatbot_name}`).catch(e => {
+        const res = await fetch(`https://api.udit.gq/api/chatbot?message=${encodeURIComponent(message)}&gender=${encodeURIComponent(chatbot_gender)}&name=${encodeURIComponent(chatbot_name)}`).catch(e => {
             throw new Error(`Ran into an Error. ${e}`);
         });
         const response = await res.json().catch(e =>{
